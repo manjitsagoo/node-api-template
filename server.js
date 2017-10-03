@@ -38,7 +38,6 @@ router.post('/test', function (req, res) {
 router.get('/version', function (req,res) {
     var obj = new Object(); 
     obj.Version = version.version;
-    obj.Env = process.env;
     winston.log('info',JSON.stringify(obj));
     res.send(JSON.parse(JSON.stringify(obj)));
 });
@@ -47,5 +46,5 @@ router.get('/version', function (req,res) {
 app.use('/api', router);
 var port = process.env.PORT||3000;
 var server = app.listen(port, function(){
-    console.log('/api listening on port' + server.address().port);
+    console.log('/api listening on port: ' + server.address().port);
 });
