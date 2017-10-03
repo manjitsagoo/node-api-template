@@ -15,3 +15,5 @@ Instructions:
 3. npm install
 4. node server.js
 5. browse to http://localhost:3000/api/version
+6. browse to http://localhost:3000/api/hello/world
+
