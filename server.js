@@ -30,7 +30,7 @@ router.post('/test', function (req, res) {
      var obj = new Object(); 
      obj.date = Date.now();
      obj.message = message;
-     winston.log('info',,"Receiced " + message);
+     winston.log('info',"Received " + message);
      res.send(JSON.stringify(obj));
   })
 
